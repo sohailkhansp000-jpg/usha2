@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ryan Sports Club</title>
+
+  <!-- BOOTSTRAP CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+ 
+</head>
+<body class="body">
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Ryan Sports Club</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facilities">Facilities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coaches">Coaches</a></li>
+          <li class="nav-item"><a class="nav-link" href="#players">Players</a></li>
+          <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content hidden">
+      <h1>EXCELLENCE IN EVERY GAME</h1>
+      <p>Elite training • Professional coaches • World-class sports facilities</p>
+      <a href="#contact" class="btn">JOIN NOW</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h1 class="title hidden">ABOUT US</h1>
+    <div class="about-container">
+      <div class="about-text hidden">
+        <h2>Ryan Sports Club</h2>
+        <p>We inspire athletes, build champions, and provide top-class facilities.</p>
+      </div>
+      <div class="about-img hidden">
+        <img src="images/A visit to Wimbledon - Centre court.jpeg" alt="Wimbledon court">
+      </div>
+    </div>
+  </section>
+
+  <!--  Facilities Section -->
+  <section id="facilities" style="padding:60px 20px; background:#1e1e2f; color:#fff; text-align:center;">
+
+    <h1 class="title" style="margin-bottom:50px; font-size:2.8rem; color:#00d4ff;">FACILITIES</h1>
+
+    <div class="cards-container" style="display:flex; flex-direction:column; align-items:center; gap:40px; max-width:700px; margin:auto;">
+
+      <!-- Football Field Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" 
+             src="images/Football1.png" 
+             alt="Outdoor Football Field" 
+             style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" 
+             onclick="openLightbox(this)">
+             
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Outdoor Football Field</h3>
+        <p style="color: silver; font-size:0.95rem;">
+          A large rectangular grass area about 100–110 meters long and 64–75 meters wide. It features goalposts on both ends, marked lines, and zones like penalty areas and center circle. It's designed for speed, strategy, and high-intensity gameplay. 
+        </p>
+      </div>
+
+      <!-- Cricket Stadium Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" src="images/Cricket (2).png" alt="Cricket Stadium" style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" onclick="openLightbox(this.src)">
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Cricket Stadium</h3>
+        <p style="color: silver; font-size: 0.95rem;">
+          A large, open-air venue designed for playing cricket, It includes a carefully maintained pitch at the center and boundary lines, accommodating thousands of fans for high-energy matches. The stadium often hosts domestic, international, and tournament-level games, creating an electrifying atmosphere.
+        </p>
+      </div>
+
+      <!-- Basketball Arena Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" src="images/Basket Ball1.png" alt="Basketball Arena" style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" onclick="openLightbox(this.src)">
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Basket Ball Arena</h3>
+        <p style="color: silver; font-size: 0.95rem;">
+          An indoor venue designed for basketball games, featuring a polished hardwood court with marked lines, hoops at both ends, and seating for spectators. It provides an energetic atmosphere for competitive matches, training, and tournaments, ensuring optimal visibility and safety for players and fans alike. The arena includes scoreboards, lighting, and sound systems to enhance the game experience.
+        </p>
+      </div>
+
+      <!-- Fitness Gym Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" src="images/Gym.png" alt="Fitness Gym" style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" onclick="openLightbox(this.src)">
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Fitness Gym</h3>
+        <p style="color: silver; font-size: 0.95rem;">
+          Our Gym is a dedicated space equipped with machines, free weights, and fitness tools designed for strength training, cardio, and overall physical conditioning. It provides a controlled environment for workouts, personal training, and group exercise sessions. 
+        </p>
+      </div>
+
+      <!-- Cafe Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" src="images/Cafe.png" alt="Cafe & Meals" style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" onclick="openLightbox(this.src)">
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Cafe & Meals</h3>
+        <p style="color: silver; font-size: 0.95rem;">
+          Our café area is a cozy and inviting space where visitors can relax, enjoy beverages, and socialize. It often features comfortable seating, ambient lighting, and a menu of coffee, snacks, and light meals. Our Café provide a perfect spot for casual meetings.
+        </p>
+      </div>
+
+      <!-- Massage Room Card -->
+      <div class="card" style="background:#2b2b40; border-radius:15px; padding:20px; width:100%; box-shadow:0 6px 20px rgba(0,0,0,0.5); transition:0.3s;">
+        <img class="facility-img" src="images/Massage room.png" alt="Massage Room" style="width:100%; height:280px; border-radius:12px; cursor:pointer; object-fit:cover;" onclick="openLightbox(this.src)">
+        <h3 style="color:#00d4ff; margin-top:15px; font-size:1.4rem;">Massage Room & Physiotherapy</h3>
+        <p style="color: silver; font-size: 0.95rem;">
+           Massage room and physiotherapy area offer a calm and environment for relaxation and recovery. Equipped with specialized tables and tools, We provides professional massages, muscle therapy, and physiotherapy sessions. 
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Image Lightbox  -->
+  <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+    background: rgba(0,0,0,0.8); justify-content:center; align-items:center; z-index:10000;">
+    
+    <!-- Close Button -->
+    <span onclick="closeLightbox()" 
+          style="position:absolute; top:20px; right:20px; font-size:30px; color:#000; cursor:pointer; 
+                 background:#00d4ff; width:40px; height:40px; text-align:center; line-height:40px; 
+                 border-radius:50%; box-shadow:0 4px 15px rgba(0,0,0,0.5); z-index:10001;">×</span>
+    
+    <img id="lightbox-img" src="" 
+         style="max-width:90%; max-height:90%; border-radius:10px; box-shadow:0 5px 20px rgba(0,0,0,0.5);">
+  </div>
+  <br><br><br>
+
+  <!-- Coaches Section -->
+  <section id="coaches" class="fade-up" style="background-color: snow;">
+    <h1 class="title" style="color: #0c0c46; text-align: center; font-family:  Georgia, 'Times New Roman', Times, serif;">PROFESSIONAL COACHES</h1>
+
+    <div class="players-container">
+      <div class="player-card">
+        <img class="uniform-img" src="images/Lala.jpeg" alt="Gautam Gambhir" data-desc="Gautam Gambhir — Cricket Coach">
+        <h3>Sahid Afridi</h3>
+        <p>Cricket Coach</p>
+      </div>
+      <div class="player-card">
+        <img class="uniform-img" src="images/MATTEO BERRETTINI is the New Face of BOSS.jpeg" alt="Alexander" data-desc="Alexander — Tennis Coach">
+        <h3>Ross Brown</h3>
+        <p>Tennis Coach</p>
+      </div>
+      <div class="player-card">
+        <img class="uniform-img" src="images/download (1).jpeg" alt="Smith" data-desc="Smith — Football Coach">
+        <h3>Benjamin Andrew</h3>
+        <p>Football Coach</p>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- Players Section -->
+  <section id="players" class="fade-up">
+    <h1 class="title" style="color: #00d4ff; text-align: center;">Famous Players Trained In Ryan Sports Club</h1>
+
+    <div class="players-container">
+      <div class="player-card">
+        <img class="uniform-img" src="images/Virat Kohli.jpeg" alt="Virat Kohli">
+        <h3>Virat Kohli</h3>
+        <p>Cricket</p>
+      </div>
+      <div class="player-card">
+        <img class="uniform-img" src="images/Cristiano Ronaldo.jpeg" alt="Cristiano Ronaldo">
+        <h3>Cristiano Ronaldo</h3>
+        <p>FootBall</p>
+      </div>
+      <div class="player-card">
+        <img class="uniform-img" src="images/Novak Djokovic.jpeg" alt="Novak Djokovic">
+        <h3>Novak Djokovic</h3>
+        <p>Tennis</p>
+      </div>
+       <div class="player-card">
+        <img class="uniform-img" src="images/Lebron James (2).jpeg" alt="Lebron James">
+        <h3>Lebron James</h3>
+        <p>Basket Ball</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Section -->
+  <section id="membership" class="mb-5">
+    <h1>Membership Plans</h1>
+    <p>Flexible plans for hobbyists, athletes and professionals.</p>
+
+    <div class="pricing">
+      <!-- Silver Plan -->
+      <div class="plan glass-card" data-plan="silver">
+        <div class="mb-3" style="color: rgb(0, 0, 0);"><strong>Silver</strong></div>
+        <div class="price-amt">$49 <small>/mo</small></div>
+        <ul>✓ Access to indoor courts<br>✓ Basic gym facilities<br>✓ Monthly member events</ul>
+        <br>
+        <button id="openModalSilver" class="btn btn-outline-secondary">Choose Silver</button>
+      </div>
+
+      <!-- Gold Plan -->
+      <div class="plan glass-card featured" data-plan="gold">
+        <div class="mb-3" style="color: rgb(0, 0, 0);"><strong>Gold</strong></div>
+        <div class="price-amt">$89 <small>/mo</small></div>
+        <ul>✓ All Silver benefits<br>✓ Group coaching & outdoor access<br>✓ Priority event invites</ul>
+        <br>
+        <button id="openModalGold" class="btn btn-warning">Choose Gold</button>
+      </div>
+
+      <!-- Platinum Plan -->
+      <div class="plan glass-card" data-plan="platinum">
+        <div class="mb-3" style="color: #000000;"><strong>Platinum</strong></div>
+        <div class="price-amt">$149 <small>/mo</small></div>
+        <ul>✓ Personal trainer sessions<br>✓ VIP lounge & free merch<br>✓ Free tournament entries</ul>
+        <br>
+        <button id="openModalPlatinum" class="btn btn-outline-dark">Choose Platinum</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership Modal -->
+  <div id="membershipModal" class="membership-modal">
+    <div class="membership-box">
+      <button class="close-btn" id="closeModalBtn">×</button>
+      <h2 class="modal-title">Membership Application Form</h2>
+
+      <form id="membershipForm">
+        <label>Full Name *</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email *</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone *</label>
+        <input type="tel" placeholder="Enter your phone number" required>
+
+        <label>Emergency Contact *</label>
+        <input type="text" placeholder="Enter emergency contact" required>
+
+        <label>Medical Conditions (optional)</label>
+        <textarea rows="2" placeholder="Any medical conditions"></textarea>
+
+        <label>Preferred Start Date *</label>
+        <input type="date" required>
+
+        <button type="submit" class="btn-submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Events & News Section -->
+  <h3 id="events" class="eventheading">
+    <br><br>NEWS AND UPCOMING EVENTS
+  </h3>
+
+  <section class="events">
+    <div class="event-card">
+      <small class="date">Oct 10, 2025</small>
+      <h5>Ryan Premier League - Season Opener</h5>
+      <p>T20 matches across weekends. Register your team now.</p>
+    </div>
+
+    <div class="event-card">
+      <small class="date">Nov 03, 2025</small>
+      <h5>Summer Football Cup Trials</h5>
+      <p>Open trials — coaches will shortlist the best talent.</p>
+    </div>
+
+    <div class="event-card">
+      <small class="date">Dec 01, 2025</small>
+      <h5>Indoor Games Fest</h5>
+      <p>Badminton, Table Tennis & Chess championships for members.</p>
+    </div>
+  </section>
+
+  <!-- Sports Gallery Section -->
+  <section id="gallery" class="fade-up">
+    <h1 class="title">SPORTS GALLERY</h1>
+    <p style="color: #00bcd4; font-size: large;">Memories Of Ryan Sports Club</p>
+
+    <div class="gallery">
+      <div class="card"><img class="uniform-img" src="images/Cricket.png" data-desc="Cricket" alt="Cricket"></div>
+      <div class="card"><img class="uniform-img" src="images/Football.png" data-desc="Football" alt="Football"></div>
+      <div class="card"><img class="uniform-img" src="images/Basket Ball.png" data-desc="Basketball" alt="Basketball"></div>
+      <div class="card"><img class="uniform-img" src="images/Swimming.png" data-desc="Swimming" alt="Swimming"></div>
+      <div class="card"><img class="uniform-img" src="images/Cycling.png" data-desc="Cycling" alt="Cycling"></div>
+      <div class="card"><img class="uniform-img" src="images/Table Tennis.png" data-desc="Table Tennis" alt="Table Tennis"></div>
+      <div class="card"><img class="uniform-img" src="images/Tennis.png" data-desc="Tennis" alt="Tennis"></div>
+      <div class="card"><img class="uniform-img" src="images/Golf 1.png" data-desc="Golf" alt="Golf"></div>
+      <div class="card"><img class="uniform-img" src="images/Gymnastics.png" data-desc="Gymnastics" alt="Gymnastics"></div>
+      <div class="card"><img class="uniform-img" src="images/baseball1 1.png" data-desc="Baseball" alt="Baseball"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox -->
+  <div id="lightbox" role="dialog" aria-modal="true">
+    <span class="close-btn" aria-label="close">&times;</span>
+    <img id="lightbox-img" alt="">
+    <p id="lightbox-desc"></p>
+  </div>
+  <br><br>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2 class="section-title text-center" style="color: #00bcd4; font-size: xx-large;">WHAT OUR MEMBERS SAY</h2>
+    <br>
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <p>"Joining Ryan Sports Club was the best decision I made. World-class facilities and expert coaches pushed me beyond my limits!"</p>
+            <div class="testimonial-author">
+              <img class="uniform-img" src="images/Man 1.jpeg" alt="Alex M.">
+              <div>
+                <strong>Alex M.</strong>
+                <p class="small mb-0">Gold Member, 2 years</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <p>"The community here is amazing. Fitness, friends and fun all in one place!"</p>
+            <div class="testimonial-author">
+              <img class="uniform-img" src="images/Woman.jpeg" alt="Sophia L.">
+              <div>
+                <strong>Sophia L.</strong>
+                <p class="small mb-0">Platinum Member, 1 year</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <p>"Personalized attention helped me achieve goals faster than expected."</p>
+            <div class="testimonial-author">
+              <img class="uniform-img" src="images/Man 2.jpeg" alt="Daniel K.">
+              <div>
+                <strong>Daniel K.</strong>
+                <p class="small mb-0">Silver Member, 6 months</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <p>"As a professional athlete, the facilities here perfectly match my training needs."</p>
+            <div class="testimonial-author">
+              <img class="uniform-img" src="images/Man 3.jpeg" alt="James R.">
+              <div>
+                <strong>James R.</strong>
+                <p class="small mb-0">Platinum Member, 3 years</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="testimonial-nav" id="testimonialNav">
+        <div class="testimonial-dot active" data-index="0"></div>
+        <div class="testimonial-dot" data-index="1"></div>
+        <div class="testimonial-dot" data-index="2"></div>
+        <div class="testimonial-dot" data-index="3"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <br><br><br>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="fade-up" style="background-color: snow; padding-bottom: 60px;">
+    <h1 class="title" style="text-align: center; color: #00d4ff;">Frequently Asked Questions</h1>
+    <div class="faq-box">
+
+      <div class="faq-question">What are the timings?</div>
+      <div class="faq-answer">6am–10pm (Weekdays)</div>
+
+      <div class="faq-question">Is membership required?</div>
+      <div class="faq-answer">Yes, full access requires membership.</div>
+
+      <div class="faq-question">Do you offer coaching?</div>
+      <div class="faq-answer">Yes, all sports coaching available.</div>
+
+      <div class="faq-question">How do I stay updated on upcoming events?</div>
+      <div class="faq-answer">Subscribe to our newsletter for the latest updates.</div>
+
+      <div class="faq-question">How do I contact support?</div>
+      <div class="faq-answer">Reach us via the Contact Us page for chat, email, or phone help..</div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="contact fade-up">
+    <h1 class="title">Contact Us</h1>
+
+    <div class="container contact-container">
+
+      <!-- Left Side: Location & Timings -->
+      <div class="left-box fade-up">
+        <h2>Find Us</h2>
+        <p>Visit our complex — state-of-the-art facilities and easy parking.</p>
+        
+        <iframe
+        style="size: 275px;"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.9412254096426!2d67.07341097479802!3d24.800492702377237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2s!4v1700000000000"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <div
+        style="
+          color: snow;
+          width: 90%;
+          max-width: 300px;
+          margin: auto;
+          background: rgba(255, 255, 255, 0.1);
+          padding: 20px;
+          border-radius: 12px;
+          text-align: center;
+          box-shadow: 0 8px 18px rgba(0,0,0,0.4);
+          transition: all 0.3s ease-in-out;
+        "
+        onmouseover="this.style.transform='scale(1.05)'"
+        onmouseout="this.style.transform='scale(1)'"
+        >
+          <h3 style="margin-bottom:10px; color: #00d4ff;">Club Timings</h3>
+          <p><strong>Mon–Fri:</strong> 06:00 am – 10:00 pm</p>
+          <p><strong>Sat:</strong> 07:30 am – 11:00 pm</p>
+          <p><strong>Sun:</strong> Maintenance & Recovery — closed</p>
+        </div>
+
+      </div>
+
+      <!-- Right Side: Contact Form -->
+      <div class="right-box fade-up">
+        <h2>Get In Touch</h2>
+
+        <form id="contactForm">
+          <label>Full Name</label>
+          <input id="name" type="text" placeholder="Your full name" required />
+
+          <label>Email</label>
+          <input id="email" type="email" placeholder="Enter your email" required />
+
+          <label>Phone</label>
+          <input id="phone" type="text" placeholder="+92 XXX XXX XXXX" required />
+
+          <label>Interested In</label>
+          <select id="interest" required>
+            <option value="">Select option…</option>
+            <option>Membership</option>
+            <option>Sports Training</option>
+            <option>General Inquiry</option>
+          </select>
+
+          <label>Message</label>
+          <textarea id="message" placeholder="Tell us more..." required></textarea>
+
+          <div class="btn-row">
+            <button type="button" class="btn send" id="sendBtn">Send Inquiry</button>
+            <button type="button" class="btn subscribe" id="subscribeBtn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <section style="
+    background: linear-gradient(135deg, #000000, #00abbb85);
+    color: snow;
+    padding: 40px 15px;
+  ">
+    <footer class="container" style="max-width: 1200px; margin: auto;">
+      <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: flex-start;">
+
+        <div style="flex: 1 1 300px;">
+          <h5 style="color: #00bcd4; font-size: 2rem; font-weight: 700;">Ryan Sports Club</h5>
+          <p style="color: #ffffff; font-size: 0.95rem;">
+            Elite training & community - report, book, and play with the best.
+          </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div style="flex: 1 1 250px; color: #ffffff;">
+          <p style="margin-bottom: 5px;">📧 ryansportsclub@gmail.com</p>
+          <p>📞 +92 300 000000000</p>
+
+          <div style="margin-top: 10px;">
+
+            <a href="#" 
+              style="margin-right: 10px; color: #000; text-decoration: none; transition: 0.3s; font-weight: 600;"
+              onmouseover="this.style.color='#00bcd4'; this.style.transform='scale(1.2)';"
+              onmouseout="this.style.color='#000'; this.style.transform='scale(1)';"
+            >FB</a>
+
+            <a href="#" 
+              style="margin-right: 10px; color: #000; text-decoration: none; transition: 0.3s; font-weight: 600;"
+              onmouseover="this.style.color='#00bcd4'; this.style.transform='scale(1.2)';"
+              onmouseout="this.style.color='#000'; this.style.transform='scale(1)';"
+            >IG</a>
+
+            <a href="#" 
+              style="color: #000; text-decoration: none; transition: 0.3s; font-weight: 600;"
+              onmouseover="this.style.color='#00bcd4'; this.style.transform='scale(1.2)';"
+              onmouseout="this.style.color='#000'; this.style.transform='scale(1)';"
+            >YT</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div style="
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid #444;
+        font-size: 0.85rem;
+        color: #00eaff;
+      ">
+        &copy; 2025 Ryan Sports Club — All rights reserved
+      </div>
+    </footer>
+  </section>
+
+  <!-- JavaScript Links -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript & JQuery -->
+  <script>
+    $(document).ready(function () {
+      
+      // Navbar scroll effect 
+      $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 50) {
+          $(".navbar").addClass("nav-scroll");
+        } else {
+          $(".navbar").removeClass("nav-scroll");
+        }
+      });
+
+      // Hero animation on load
+      $(".hero-content").addClass("show");
+      
+      // Button hover effects 
+      $(".btn").hover(
+        function () {
+          $(this).css({
+            transform: "scale(1.1)",
+          });
+        },
+        function () {
+          $(this).css({
+            transform: "scale(1)",
+          });
+        }
+      );
+
+      // About section scroll animations
+      $(window).on("scroll", function () {
+        $(".hidden").each(function () {
+          var sectionTop = $(this).offset().top - $(window).height() + 100;
+          if ($(window).scrollTop() > sectionTop) {
+            $(this).addClass("show");
+          }
+        });
+      });
+
+    });
+
+    // Facilities card animation function
+    $(document).ready(function() {
+
+      function animateCards() {
+        $("#facilities .card").each(function(i) {
+          var top_of_element = $(this).offset().top;
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+          if (bottom_of_window > top_of_element + 50) {
+            $(this).css({
+              opacity: 1,
+              transform: "translateY(0)",
+              transition: "all 0.6s ease-in-out"
+            });
+          }
+        });
+      }
+
+      animateCards();
+      $(window).scroll(function() {
+        animateCards();
+      });
+
+    });
+
+    // Lightbox functions 
+    function openLightbox(src){
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'flex';
+      document.getElementById('lightbox-img').src = src;
+    }
+
+    function closeLightbox(){
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
+    }
+
+    // Enhanced lightbox 
+    function openLightbox(src, desc){
+      $('#lightbox-img').attr('src', src);
+      $('#lightbox-img').attr('alt', desc || 'Image');
+      $('#lightbox-desc').text(desc || '');
+      $('#lightbox').fadeIn().css('display','flex');
+    }
+
+    // Image  handlers 
+    $('.gallery img, .facility-img, .player-card img, .about-img img, .testimonial-author img').on('click', function(e){
+      e.stopPropagation();
+      var src = $(this).attr('src');
+      var desc = $(this).data('desc') || $(this).attr('alt') || '';
+      openLightbox(src, desc);
+    });
+
+    // Lightbox close handlers
+    $('#lightbox').on('click', function(e){
+      if(e.target === this || $(e.target).hasClass('close-btn')){ 
+        $('#lightbox').fadeOut(); 
+      }
+    });
+    
+    $('#lightbox .close-btn').on('click', function(){ 
+      $('#lightbox').fadeOut(); 
+    });
+
+    // Fade-in animations on scroll
+    $(window).on("scroll", function () {
+      $(".fade-in, .fade-up").each(function () {
+        var elementTop = $(this).offset().top;
+        var windowBottom = $(window).scrollTop() + $(window).height();
+
+        if (windowBottom > elementTop + 50) {
+          $(this).addClass("show");
+        }
+      });
+    });
+
+    // Membership modal 
+    const modal = document.getElementById("membershipModal");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+
+    // Modal open handlers
+    document.getElementById("openModalSilver").onclick = () => modal.classList.add("show");
+    document.getElementById("openModalGold").onclick = () => modal.classList.add("show");
+    document.getElementById("openModalPlatinum").onclick = () => modal.classList.add("show");
+
+    // Modal close handlers
+    closeModalBtn.onclick = () => modal.classList.remove("show");
+
+    // Close when clicking outside modal
+    window.onclick = (e) => {
+      if(e.target === modal) modal.classList.remove("show");
+    };
+
+    // Form submission handler
+    document.getElementById("membershipForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      alert("🎉 Your Membership Application Has Been Submitted Successfully!\nOur team will contact you soon.");
+      modal.classList.remove("show");
+      this.reset();
+    });
+
+    // Membership scroll animations
+    $(document).ready(function(){
+      function scrollAnimation() {
+        $('.glass-card, #membership .section-title, #membership .lead-muted').each(function(){
+          var elemTop = $(this).offset().top;
+          var windowBottom = $(window).scrollTop() + $(window).height();
+          if(windowBottom > elemTop + 50) {
+            $(this).addClass('show');
+          }
+        });
+      }
+
+      scrollAnimation();
+      $(window).scroll(function(){ scrollAnimation(); });
+    });
+
+    // Event cards animation
+    const eventCards = document.querySelectorAll('.event-card');
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) - 50
+      );
+    }
+
+    function animateOnScroll() {
+      eventCards.forEach(card => {
+        if(isInViewport(card)) {
+          card.classList.add('fade-up', 'show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+
+    // Gallery lightbox 
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxDesc = document.getElementById('lightbox-desc');
+    const closeBtn = document.querySelector('#lightbox .close-btn');
+
+    // Gallery image click handlers
+    document.querySelectorAll('.gallery .card img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = img.src;
+        lightboxDesc.textContent = img.dataset.desc;
+      });
+    });
+
+    // Gallery close handlers
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if(e.target === lightbox) lightbox.style.display = 'none';
+    });
+
+    // Gallery scroll animation
+    const cards = document.querySelectorAll('.gallery .card');
+
+    function showCardsOnScroll() {
+      const triggerBottom = window.innerHeight * 0.85;
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+        if(cardTop < triggerBottom){
+          card.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', showCardsOnScroll);
+    window.addEventListener('load', showCardsOnScroll);
+
+    // Testimonial slider 
+    const track = document.getElementById("testimonialTrack");
+    const dots = document.querySelectorAll(".testimonial-dot");
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        let index = dot.getAttribute("data-index");
+
+        // Move the slider
+        track.style.transform = `translateX(-${index * 100}%)`;
+
+        // Update active dot
+        dots.forEach(d => d.classList.remove("active"));
+        dot.classList.add("active");
+      });
+    });
+
+    // FAQ accordion 
+    $('.faq-question').on('click', function(){
+      $(this).toggleClass('active').next().slideToggle();
+      $('.faq-answer').not($(this).next()).slideUp();
+      $('.faq-question').not(this).removeClass('active');
+    });
+
+    // FAQ scroll animations
+    const fadeElements = document.querySelectorAll('.fade-up');
+
+    const showOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      fadeElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('show');
+        } 
+      });
+    };
+
+    window.addEventListener('scroll', showOnScroll);
+    window.addEventListener('load', showOnScroll);
+
+    // Contact form 
+    document.getElementById("sendBtn").addEventListener("click", function () {
+      if (document.getElementById("contactForm").checkValidity()) {
+        alert("Your inquiry has been successfully sent! Our team will contact you shortly. 😊");
+        document.getElementById("contactForm").reset(); 
+      } else {
+        document.getElementById("contactForm").reportValidity();
+      }
+    });
+
+    document.getElementById("subscribeBtn").addEventListener("click", function () {
+      if (document.getElementById("contactForm").checkValidity()) {
+        alert("Thank you for subscribing! You'll receive our latest updates and offers. 🚀");
+        document.getElementById("contactForm").reset(); 
+      } else {
+        document.getElementById("contactForm").reportValidity();
+      }
+    });
+
+  </script>
+</body>
+</html>
